@@ -24,7 +24,7 @@ hyper = { version = "0.13.3", features = ["stream"] }
 hyper-tls = "0.4"
 log = "0.4"
 thiserror = "1.0"
-tokio = "0.2"
+tokio = { version = "0.3", features = ["rt", "rt-multi-thread"] }
 
 [dev-dependencies]
 pubnub-test-util = { version = "0.1", path = "../pubnub-test-util" }
@@ -37,7 +37,7 @@ json = "0.12"
 log = "0.4"
 percent-encoding = "2.1"
 randomize = "3.0"
-tokio = { version = "0.2", features = ["macros"] }
+tokio = { version = "0.3", features = ["macros"] }
 
 [badges]
 travis-ci = { repository = "pubnub/rust", branch = "master" }
