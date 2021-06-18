@@ -15,29 +15,29 @@ license-file = "../LICENSE"
 pubnub-core = { version = "=0.1.0", path = "../pubnub-core" }
 pubnub-util = { version = "=0.1.0", path = "../pubnub-util", default-features = false, features = ["uritemplate_api", "pam_signature"] }
 async-trait = "0.1"
-derive_builder = "0.9"
+derive_builder = "0.10"
 error-iter = "0.2"
 futures-util = { version = "0.3", features = ["async-await", "async-await-macro"] }
 getset = "0.1"
 http = "0.2"
-hyper = { version = "0.13.3", features = ["stream"] }
-hyper-tls = "0.4"
+hyper = { version = "0.14", features = ["tcp", "stream", "client", "http1", "http2"] }
+hyper-tls = "0.5"
 log = "0.4"
 thiserror = "1.0"
-tokio = { version = "0.3", features = ["rt", "rt-multi-thread"] }
+tokio = { version = "1", features = ["rt", "rt-multi-thread"] }
 
 [dev-dependencies]
 pubnub-test-util = { version = "0.1", path = "../pubnub-test-util" }
 byteorder = "1.3"
 futures-channel = "0.3"
 futures-executor = "0.3"
-getrandom = "0.1"
+getrandom = "0.2"
 http = "0.2"
 json = "0.12"
 log = "0.4"
 percent-encoding = "2.1"
 randomize = "3.0"
-tokio = { version = "0.3", features = ["macros"] }
+tokio = { version = "1", features = ["macros"] }
 
 [badges]
 travis-ci = { repository = "pubnub/rust", branch = "master" }

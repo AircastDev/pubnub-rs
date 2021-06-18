@@ -4,7 +4,10 @@ use crate::core::data::uuid::UUID;
 use crate::core::Transport;
 use derive_builder::Builder;
 use getset::Getters;
-use hyper::{client::HttpConnector, Body, Client};
+use hyper::{
+    client::{Client, HttpConnector},
+    Body,
+};
 use hyper_tls::HttpsConnector;
 use std::time::Duration;
 
